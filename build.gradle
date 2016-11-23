@@ -15,7 +15,7 @@ dependencies {
 	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.4.2.RELEASE'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.4.2.RELEASE'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-freemarker', version: '1.4.2.RELEASE'
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '1.4.2.RELEASE'
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '1.4.2.RELEASE'
 	compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '1.4.2.RELEASE'
 	
 	//compile group: 'com.github.pagehelper', name: 'pagehelper', version: '4.1.6'

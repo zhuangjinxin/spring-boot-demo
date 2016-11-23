@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 public class ScheduledTask {
 	
-	@Scheduled(cron = "0/20 * * * * ?")
+	//@Scheduled(cron = "0/20 * * * * ?")
 	public void task(){
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(df.format(new Date())+" 20s打印一次");
