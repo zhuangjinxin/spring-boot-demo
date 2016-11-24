@@ -14,13 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class UseSingleConfigController {
 	
-	@Value("${name}")  
-	private String name;
+	//@Value("${name}")  
+	//private String name;
 	
 	@RequestMapping("/singleConfig")
 	@ResponseBody
 	public String printConfiguration(){
-		return "My name is " + name +".";
+		//return "My name is " + name +".";
+		return "My name is " + "zhuangjinxin" +".";
 	}
 
 }
