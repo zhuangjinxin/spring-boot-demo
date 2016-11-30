@@ -22,13 +22,12 @@ public class Producer {
 	private Queue queue;
 
 //	@Override
-//	@Scheduled(fixedDelay=3000)
 //	public void run(String... args) throws Exception {
 //		send("Sample message");
 //		System.out.println("Message was sent to the Queue");
 //	}
 
-	@Scheduled(fixedDelay=3000)
+	//@Scheduled(fixedDelay=3000)
 	private void send() {
 		this.jmsMessagingTemplate.convertAndSend(this.queue,"Hi,ActiveMQ");
 	}
