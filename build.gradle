@@ -25,7 +25,7 @@ repositories {
 }
 
 configurations {
-    all*.exclude module: 'slf4j-jcl'	
+    //all*.exclude module: 'spring-boot-starter-logging'
 }
 
 dependencies {
@@ -51,8 +51,13 @@ dependencies {
 	// RabbitMQ
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '1.4.2.RELEASE'
 	
-	// log4j
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j', version: '1.3.8.RELEASE'
+	// 日志
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j', version: '1.3.8.RELEASE'
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '1.4.2.RELEASE'
+	
+	// Redis
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '1.4.2.RELEASE'
+	
 	
 	
 	
