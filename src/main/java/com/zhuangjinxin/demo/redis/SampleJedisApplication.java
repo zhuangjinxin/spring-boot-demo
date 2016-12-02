@@ -18,7 +18,7 @@ public class SampleJedisApplication {
 	@PostConstruct
 	public void doSomething(){
 		Jedis jedis=new Jedis("120.27.48.62",6379);//建立连接
-		//jedis.auth("redis"); 
+		jedis.auth("redis"); 
 		
 		System.out.println("-----Jedis增删改查-----");
 		jedis.set("jedis", "jedis");//添加

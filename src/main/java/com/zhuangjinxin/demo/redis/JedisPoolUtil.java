@@ -8,7 +8,7 @@ public class JedisPoolUtil {
 	
 	private static String ADDR = "120.27.48.62";//Redis服务器IP
 	private static int PORT = 6379;//Redis的端口号
-	private static String AUTH ="";//访问密码
+	private static String AUTH ="redis";//访问密码
 	private static int MAX_ACTIVE = 1024;//可用连接实例的最大数目，默认值为8；//如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
 	private static int MAX_IDLE = 200;//控制一个pool最多有多少个状态为idle(空闲的)的jedis实例，默认值也是8。
 	private static int MAX_WAIT = 10000;//等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException；
@@ -24,8 +24,7 @@ public class JedisPoolUtil {
 	        config.setMaxIdle(MAX_IDLE);
 	        //config.setMaxWait(MAX_WAIT);
 	        config.setTestOnBorrow(TEST_ON_BORROW);
-	        //jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT, AUTH);
-	        jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT);
+	        jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT, AUTH);
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
